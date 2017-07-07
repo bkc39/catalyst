@@ -116,7 +116,7 @@ def poloniex_cryptoassets(symbols, start=None, end=None):
                 )
 
             # scale to allow trading 10-ths of a coin
-            scale = 10.0
+            scale = 1000.0
             daily_bars.loc[:, 'open'] /= scale
             daily_bars.loc[:, 'high'] /= scale
             daily_bars.loc[:, 'low'] /= scale
